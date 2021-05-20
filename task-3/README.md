@@ -74,3 +74,16 @@ Here is a list of requirements:
 - `alias_count` simply counts how many unique aliases a user has across teams
 - `team_count` simply counts how many teams a user belongs to
 - Resulting table is sorted by `team_count` from most to least
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SELECT COUNT ( DISTINCT user_id ) AS "user_id
+FROM task_3
+UNION
+SELECT COUNT ( DISTINCT alias_count) AS "alias_count"
+FROM task_3
+UNION
+SELECT COUNT ( DISTINCT team_id) AS "team_count"
+FROM task_3
+ORDER BY "team_count" DESC
+
