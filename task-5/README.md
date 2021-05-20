@@ -3,7 +3,15 @@
 This task is meant to gauge your knowledge of javascript promises. Consider the following code snippet:
 
 ```js
-function countdown ( seconds ) {
+import time
+function countdown ( seconds )
+{
+	var time
+	for( var i = 5 ; i >= 0; i--)
+	{
+	 time += i + "!"
+	 setTimeout(() => {console.log(' //wait 1 sec')}, 1000);
+	}
 	return Promise.resolve ()
 }
 
